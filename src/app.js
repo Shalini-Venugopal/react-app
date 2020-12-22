@@ -1,13 +1,7 @@
-"use strict";
-
 console.log("App.js is running");
 
 //JSX code
-var template = React.createElement(
-  "h1",
-  null,
-  "It will be changed!!!"
-);
+var template = <h1>It will be changed!!!</h1>;
 
 var appRoot = document.getElementById('app');
 

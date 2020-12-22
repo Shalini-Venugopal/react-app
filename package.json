@@ -1,0 +1,12 @@
+{
+  "name": "react-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Shalini-Venugopal/react-app.git",
+  "author": "Shalini",
+  "license": "MIT",
+  "dependencies": {
+    "babel-preset-env": "1.5.2",
+    "babel-preset-react": "6.24.1"
+  }
+}
