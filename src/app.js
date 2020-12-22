@@ -1,16 +1,16 @@
 console.log("App.js is running");
 
-//JSX code
+var user ={
+    name : 'ABCD',
+    title : 'Ponniyin Selvan',
+    author : 'Kalki Krishnamurthy'
+};
 var template = (
     <div>
-        <h1>Hello World!!!</h1>
-        <h1>Name : Shalini</h1>
-        <p>It contains some Info</p>
-        <p>Place : Komarapalayam</p>
-        <ol>
-            <li>Degree : B.E.</li>
-            <li>Stream : CSE</li>
-        </ol>
+        <h1>Hello World</h1>
+        <h1>Name : {user.name + '!'}</h1>
+        <p>Age :{user.title}</p>
+        <p>Location: {user.author}</p>
     </div>
 );
 

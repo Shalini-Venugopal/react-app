@@ -1,44 +1,37 @@
-"use strict";
+'use strict';
 
 console.log("App.js is running");
 
-//JSX code
+var user = {
+    name: 'ABCD',
+    title: 'Ponniyin Selvan',
+    author: 'Kalki Krishnamurthy'
+};
 var template = React.createElement(
-    "div",
+    'div',
     null,
     React.createElement(
-        "h1",
+        'h1',
         null,
-        "Hello World!!!"
+        'Hello World'
     ),
     React.createElement(
-        "h1",
+        'h1',
         null,
-        "Name : Shalini"
+        'Name : ',
+        user.name + '!'
     ),
     React.createElement(
-        "p",
+        'p',
         null,
-        "It contains some Info"
+        'Age :',
+        user.title
     ),
     React.createElement(
-        "p",
+        'p',
         null,
-        "Place : Komarapalayam"
-    ),
-    React.createElement(
-        "ol",
-        null,
-        React.createElement(
-            "li",
-            null,
-            "Degree : B.E."
-        ),
-        React.createElement(
-            "li",
-            null,
-            "Stream : CSE"
-        )
+        'Location: ',
+        user.author
     )
 );
 
