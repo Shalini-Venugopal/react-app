@@ -9,4 +9,12 @@ console.log('nameLet', nameLet);
 const nameConst = 'Harith';
 console.log('nameConst', nameConst);
 
+const fullName = 'Shalini Venugopal';
+let firstName;
+if(fullName){
+    firstName = fullName.split(' ')[0];
+    console.log(firstName);
+}
+console.log(firstName);
+
 
