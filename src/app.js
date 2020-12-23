@@ -39,23 +39,32 @@ console.log("App.js is running");
 
 let count = 0;
 const addOne = () => {
-    console.log('addOne');
+    //console.log('addOne');
+    count++;
+    renderCounterApp();
 };
 const minusOne = () => {
-    console.log('minusOne');
+    count--;
+    renderCounterApp();
 };
 const reset = () => {
-    console.log('reset');
+    count = 0;
+    renderCounterApp();
 };
-const counter = (
-    <div>
-        <h1>Count : {count}</h1>
-        <button onClick={addOne}>Count+1</button>
-        <button onClick= {minusOne}>Count-1</button>
-        <button onClick={reset}>Reset</button>
-    </div>
-)
-
 const appRoot = document.getElementById('app');
 
+const renderCounterApp = () => {
+    const counter = (
+        <div>
+            <h1>Count : {count}</h1>
+            <button onClick={addOne}>Count+1</button>
+            <button onClick= {minusOne}>Count-1</button>
+            <button onClick={reset}>Reset</button>
+        </div>
+    );
+
+
+
 ReactDOM.render(counter, appRoot);
+};
+renderCounterApp();

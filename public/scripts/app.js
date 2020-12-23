@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 console.log("App.js is running");
 
@@ -41,40 +41,47 @@ console.log("App.js is running");
 
 var count = 0;
 var addOne = function addOne() {
-    console.log('addOne');
+    //console.log('addOne');
+    count++;
+    renderCounterApp();
 };
 var minusOne = function minusOne() {
-    console.log('minusOne');
+    count--;
+    renderCounterApp();
 };
 var reset = function reset() {
-    console.log('reset');
+    count = 0;
+    renderCounterApp();
 };
-var counter = React.createElement(
-    'div',
-    null,
-    React.createElement(
-        'h1',
-        null,
-        'Count : ',
-        count
-    ),
-    React.createElement(
-        'button',
-        { onClick: addOne },
-        'Count+1'
-    ),
-    React.createElement(
-        'button',
-        { onClick: minusOne },
-        'Count-1'
-    ),
-    React.createElement(
-        'button',
-        { onClick: reset },
-        'Reset'
-    )
-);
-
 var appRoot = document.getElementById('app');
 
-ReactDOM.render(counter, appRoot);
+var renderCounterApp = function renderCounterApp() {
+    var counter = React.createElement(
+        "div",
+        null,
+        React.createElement(
+            "h1",
+            null,
+            "Count : ",
+            count
+        ),
+        React.createElement(
+            "button",
+            { onClick: addOne },
+            "Count+1"
+        ),
+        React.createElement(
+            "button",
+            { onClick: minusOne },
+            "Count-1"
+        ),
+        React.createElement(
+            "button",
+            { onClick: reset },
+            "Reset"
+        )
+    );
+
+    ReactDOM.render(counter, appRoot);
+};
+renderCounterApp();
