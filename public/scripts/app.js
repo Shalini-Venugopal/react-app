@@ -1,82 +1,37 @@
 'use strict';
 
-console.log("App.js is running");
+var visibility = 'false';
 
-var app = {
-    title: 'React App',
-    subtitle: 'Put your life on Learning',
-    options: ['React JS', 'Java']
-};
-
-var onFormSubmit = function onFormSubmit(e) {
-    e.preventDefault();
-    var option = e.target.elements.option.value;
-
-    if (option) {
-        app.options.push(option);
-        e.target.elements.option.value = '';
-        render();
-    }
-};
-
-var onRemoveAll = function onRemoveAll() {
-    app.options = [];
+var toggleVisibility = function toggleVisibility() {
+    visibility = !visibility;
     render();
 };
 
-var appRoot = document.getElementById('app');
 var render = function render() {
-    var template = React.createElement(
+    var jsx = React.createElement(
         'div',
         null,
         React.createElement(
             'h1',
             null,
-            app.title
-        ),
-        app.subtitle && React.createElement(
-            'p',
-            null,
-            app.subtitle
-        ),
-        React.createElement(
-            'p',
-            null,
-            app.options.length > 0 ? 'Here are your options' : 'No options'
-        ),
-        React.createElement(
-            'p',
-            null,
-            app.options.length
+            'Visibility Toggle'
         ),
         React.createElement(
             'button',
-            { onClick: onRemoveAll },
-            'Remove All'
+            { onClick: toggleVisibility },
+            !visibility ? 'Hide Details' : 'Show Details'
         ),
-        React.createElement(
-            'ol',
+        !visibility && React.createElement(
+            'div',
             null,
-            app.options.map(function (option) {
-                return React.createElement(
-                    'li',
-                    { key: option },
-                    option
-                );
-            })
-        ),
-        React.createElement(
-            'form',
-            { onSubmit: onFormSubmit },
-            React.createElement('input', { type: 'text', name: 'option' }),
             React.createElement(
-                'button',
+                'p',
                 null,
-                'Add Option'
+                'Hey, I am there'
             )
         )
     );
-    ReactDOM.render(template, appRoot);
+    ReactDOM.render(jsx, document.getElementById('app'));
 };
 
 render();
