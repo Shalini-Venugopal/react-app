@@ -20,12 +20,15 @@ var FirstApp = function (_React$Component) {
     _createClass(FirstApp, [{
         key: 'render',
         value: function render() {
+            var title = 'React Application';
+            var subtitle = 'Put your life on coding';
+            var options = ['First', 'Second', 'Third'];
             return React.createElement(
                 'div',
                 null,
-                React.createElement(Header, null),
+                React.createElement(Header, { title: title, subtitle: subtitle }),
                 React.createElement(Action, null),
-                React.createElement(Options, null),
+                React.createElement(Options, { options: options }),
                 React.createElement(AddOption, null)
             );
         }
@@ -52,12 +55,12 @@ var Header = function (_React$Component2) {
                 React.createElement(
                     'h1',
                     null,
-                    'React Application'
+                    this.props.title
                 ),
                 React.createElement(
                     'h2',
                     null,
-                    'Put your life on coding'
+                    this.props.subtitle
                 )
             );
         }
@@ -108,8 +111,9 @@ var Options = function (_React$Component4) {
             return React.createElement(
                 'div',
                 null,
-                'Options Component here.',
-                React.createElement(Option, null)
+                this.props.options.map(function (option) {
+                    return React.createElement(Option, { key: option, optionText: option });
+                })
             );
         }
     }]);
@@ -132,7 +136,7 @@ var Option = function (_React$Component5) {
             return React.createElement(
                 'div',
                 null,
-                'Option Component here.'
+                this.props.optionText
             );
         }
     }]);
