@@ -10,6 +10,16 @@ class FirstApp extends React.Component {
         };
     }
 
+    componentDidMount() {
+        console.log('Fetching Data!');
+    }
+    componentDidUpdate(prevProps, prevState) {
+        console.log('Saving Data!');
+    }
+    componentWillUnmount() {
+        console.log('componentWillUnmount!');
+    }
+
     handleDeleteOption(optionToRemove) {
         //console.log('hdo',option);
         this.setState((prevState) => ({
@@ -42,7 +52,7 @@ class FirstApp extends React.Component {
 
     render(){
         const title = 'React Application';
-        const subtitle = 'Put your life on coding';
+        const subtitle = 'Welcome!';
         // const options = ['First', 'Second', 'Third'];
         return (
                 <div>

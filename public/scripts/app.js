@@ -27,6 +27,21 @@ var FirstApp = function (_React$Component) {
     }
 
     _createClass(FirstApp, [{
+        key: 'componentDidMount',
+        value: function componentDidMount() {
+            console.log('Fetching Data!');
+        }
+    }, {
+        key: 'componentDidUpdate',
+        value: function componentDidUpdate(prevProps, prevState) {
+            console.log('Saving Data!');
+        }
+    }, {
+        key: 'componentWillUnmount',
+        value: function componentWillUnmount() {
+            console.log('componentWillUnmount!');
+        }
+    }, {
         key: 'handleDeleteOption',
         value: function handleDeleteOption(optionToRemove) {
             //console.log('hdo',option);
@@ -70,7 +85,7 @@ var FirstApp = function (_React$Component) {
         key: 'render',
         value: function render() {
             var title = 'React Application';
-            var subtitle = 'Put your life on coding';
+            var subtitle = 'Welcome!';
             // const options = ['First', 'Second', 'Third'];
             return React.createElement(
                 'div',
