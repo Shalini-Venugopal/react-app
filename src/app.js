@@ -1,14 +1,26 @@
-import subtract, { square,add } from './utils';
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-console.log('app.js is running!!!');
-console.log(square(4));
-console.log(add(100,23));
+const template = <p>THIS IS MY PAGE</p>
+        // <div>
+        //     <h1>Page Title</h1>
+        //     <p>This is My Page</p>
+        // </div>
+    
+    
+ReactDOM.render(template, document.getElementById('app'));
 
-console.log(subtract(150,50));
+
+// import subtract, { square,add } from './utils';
+
+// console.log('app.js is running!!!');
+// console.log(square(4));
+// console.log(add(100,23));
+
+// console.log(subtract(150,50));
 
 
-// import React from 'react';
-// import ReactDOM from 'react-dom';
+
 // import IndecisionApp from './components/IndecisionApp';
 
 // const Layout = (props) => {
