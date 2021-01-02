@@ -1,14 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import IndecisionApp from './components/IndecisionApp';
 
-const template = <p>THIS IS MY PAGE</p>
-        // <div>
-        //     <h1>Page Title</h1>
-        //     <p>This is My Page</p>
-        // </div>
-    
-    
-ReactDOM.render(template, document.getElementById('app'));
+ReactDOM.render(<IndecisionApp />, document.getElementById('app'));
+
 
 
 // import subtract, { square,add } from './utils';
@@ -19,9 +14,6 @@ ReactDOM.render(template, document.getElementById('app'));
 
 // console.log(subtract(150,50));
 
-
-
-// import IndecisionApp from './components/IndecisionApp';
 
 // const Layout = (props) => {
 //     return (
